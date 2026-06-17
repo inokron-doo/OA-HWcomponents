@@ -36,7 +36,7 @@ following materials are **planned for a later update**:
 |------|--------|----------|
 | Gerber fabrication files | ✅ Included | — |
 | Schematic (PDF export) | ✅ Included | — |
-| Bill of Materials | 🟡 In progress | — |
+| Bill of Materials | ✅ Included | — |
 | Enclosure / mount STL files | 🟡 Pending | — |
 | Schematic + PCB **source files** (Altium) | ⬜ Not yet | After June 2026 |
 | Firmware | ↗ Separate repos | See below |

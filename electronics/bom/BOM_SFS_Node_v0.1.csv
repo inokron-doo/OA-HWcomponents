@@ -1,14 +1,26 @@
-Item,Designator,Component,Description,Manufacturer,MPN,Qty,Supplier,Notes
-1,U1,STM32F051K8T7,ARM Cortex-M0 MCU LQFP-32,STMicroelectronics,STM32F051K8T7,1,Farnell,Main controller
-2,U2,LR02,LoRa module 433 MHz,TBD,LR02,1,TBD,Radio
-3,U3,SHT85,Temperature & humidity sensor,Sensirion,SHT85,1,Farnell,DHT22 supported as lower-cost alternative
-4,PS1,HLK-5M05,AC/DC power module 100-240VAC to 5V,Hi-Link,HLK-5M05,1,TBD,Mounted separately in enclosure
-5,-,SEN0524 / SEN0648,UART distance sensor,DFRobot,SEN0648,4,TBD,Up to 4 per node; external; not on PCB
-6,-,UART MUX (4-port),4-channel UART multiplexer,TBD,TBD,1,TBD,Routes up to 4 distance sensors
-7,-,Terminal blocks,2.54mm / screw terminal blocks,TBD,TBD,TBD,TBD,Through-hole
-8,-,Pin headers,2.54mm headers incl. SWD programming header,TBD,TBD,TBD,TBD,Through-hole
-9,SW1,Reset button,Tactile push button,TBD,TBD,1,TBD,Through-hole
-10,-,Status LEDs,Indicator LEDs,TBD,TBD,TBD,TBD,Operating status indication
-11,-,Passives,Resistors / capacitors (e.g. R4 10K, C5 0.1uF),TBD,TBD,TBD,TBD,See schematic; full passive list TBD
-,,,,,,,,
-NOTE,,,,,,,,"v0.1 starter BOM. Manufacturer part numbers marked TBD to be completed from the Altium project BOM export (source files due after June 2026). Farnell-sourced parts are RoHS-compliant; AliExpress-sourced parts unverified."
+Group,Reference,Description,Value / Specification,MPN,Package,Qty per node,Supplier,Supplier P/N,Notes
+PCB,U1,Microcontroller,32-bit Cortex-M0 48MHz,STM32F051K8T7,LQFP-32,1,Farnell,2333141,T6 (0–70°C) currently deployed; T7 (−40–85°C) specified for production
+PCB,U2,LoRa transceiver module,433 MHz ASR6601-based,LR02,Module,1,AliExpress,1005007260159931,Pick proper frequency range for local legislation
+PCB,U3,Temperature & humidity sensor,±0.1°C / ±1.5% RH / I²C,SHT85,DFN-8,1,Farnell,3106917,Primary
+PCB,U3-ALT,Temperature & humidity sensor (alternative),±0.5°C / ±2–5% RH,AM2302 / DHT22,Through-hole module,1,Generic,,Lower-cost alternative
+PCB,U4,Dual 4-to-1 multiplexer,,74HC153D,SOIC-16,1,Farnell,1201248,Sensor port MUX
+PCB,U5,LDO voltage regulator,3.3V output,LD1117AS33TR,SOT-223,1,Farnell,1467776,
+PCB,Q1,N-channel MOSFET,,SI2302CDS-T1-GE3,SOT-23,1,Farnell,1684049,Power switching
+PCB,D1,Schottky diode,1A 60V,PMEG6010ELRX,SOD-123,1,Farnell,2469681,Reverse polarity / flyback protection
+PCB,C1–C7,Capacitor,100nF 16V X7R,805,805,7,Generic,,Decoupling
+PCB,R1–R3,Resistor,100Ω 1% 0.125W,805,805,3,Generic,,LED current limiting
+PCB,R4–R10,Resistor,10kΩ 1% 0.125W,805,805,7,Generic,,Pull-up / pull-down
+PCB,R11,Resistor,100kΩ 1% 0.125W,805,805,1,Generic,,Biasing
+PCB,LED1–LED2,LED green,~70mcd 576nm,805,805,2,Generic,,COMM and WRK indicators
+PCB,LED3,LED red,~50mcd 632nm,805,805,1,Generic,,ERROR indicator
+PCB,SW1,Tactile push button (reset),3×4×2mm 4-pin SMD,,3×4×2mm SMD,1,AliExpress,1005003633166129,Generic equivalent acceptable
+PCB,J1–J3,Wire-to-board terminal block,2-way 3.81mm pitch,MC000018,PCB through-hole,3,Generic,,Power connections
+PCB,J4,Female pin header,2.54mm pitch,,2.54mm,1 strip,Generic,,Cut to required length
+PCB,J5,Male pin header,2.54mm pitch,,2.54mm,1 strip,Generic,,Cut to required length
+ENCLOSURE,ENCL-1,3D printed sensor node enclosure,FDM — PETG or ABS recommended,,Printed part,1,—,,STL: mechanical/sensor-node-enclosure-v0.1.stl
+ENCLOSURE,ENCL-2,3D printed sensor mount (per distance sensor),FDM — PETG or ABS recommended,,Printed part,up to 4,—,,STL: mechanical/sensor-mount-v0.1.stl
+INSTALLATION,INST-1,AC-DC power module,220V in / 5V 1A out,HLK-5M05,PCB module,1,AliExpress,,Mains-powered nodes
+INSTALLATION,INST-2,ToF laser distance sensor,,SEN0648,Module,up to 4,DFRobot,,Older SEN0524 version used on original deployment
+INSTALLATION,INST-3,Internal wiring protoboard,Single-side FR4 ~15×20cm,,15×20cm,1,Generic,,Enclosure internal wiring board
+INSTALLATION,INST-4,Screw terminal,4P 5mm pitch,,PCB through-hole,as needed,Generic,,Protoboard power and sensor distribution
+INSTALLATION,INST-5,Sensor cable,JST GH1.25 to jumper wire,—,—,up to 4,Generic,,One per sensor port; included with SEN0648
