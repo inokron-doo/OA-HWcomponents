@@ -1,0 +1,14 @@
+Item,Designator,Component,Description,Manufacturer,MPN,Qty,Supplier,Notes
+1,U1,STM32F051K8T7,ARM Cortex-M0 MCU LQFP-32,STMicroelectronics,STM32F051K8T7,1,Farnell,Main controller
+2,U2,LR02,LoRa module 433 MHz,TBD,LR02,1,TBD,Radio
+3,U3,SHT85,Temperature & humidity sensor,Sensirion,SHT85,1,Farnell,DHT22 supported as lower-cost alternative
+4,PS1,HLK-5M05,AC/DC power module 100-240VAC to 5V,Hi-Link,HLK-5M05,1,TBD,Mounted separately in enclosure
+5,-,SEN0524 / SEN0648,UART distance sensor,DFRobot,SEN0648,4,TBD,Up to 4 per node; external; not on PCB
+6,-,UART MUX (4-port),4-channel UART multiplexer,TBD,TBD,1,TBD,Routes up to 4 distance sensors
+7,-,Terminal blocks,2.54mm / screw terminal blocks,TBD,TBD,TBD,TBD,Through-hole
+8,-,Pin headers,2.54mm headers incl. SWD programming header,TBD,TBD,TBD,TBD,Through-hole
+9,SW1,Reset button,Tactile push button,TBD,TBD,1,TBD,Through-hole
+10,-,Status LEDs,Indicator LEDs,TBD,TBD,TBD,TBD,Operating status indication
+11,-,Passives,Resistors / capacitors (e.g. R4 10K, C5 0.1uF),TBD,TBD,TBD,TBD,See schematic; full passive list TBD
+,,,,,,,,
+NOTE,,,,,,,,"v0.1 starter BOM. Manufacturer part numbers marked TBD to be completed from the Altium project BOM export (source files due after June 2026). Farnell-sourced parts are RoHS-compliant; AliExpress-sourced parts unverified."

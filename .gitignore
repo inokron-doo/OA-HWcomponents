@@ -1,0 +1,17 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.vscode/
+.idea/
+
+# Office temp files
+~$*.docx
+~$*.xlsx
+
+# Altium build/history (add specifics when source files land)
+History/
+__Previews/
+Project Logs*/
+*.bak

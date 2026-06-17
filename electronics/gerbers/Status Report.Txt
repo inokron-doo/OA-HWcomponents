@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Lora_SensorNetworkNode_V0.1.PrjPCB]
+   Generated File[Lora_SensorNetworkNode_V0.1.TXT]
+   Generated File[Lora_SensorNetworkNode_V0.1.LDP]
+   Generated File[Lora_SensorNetworkNode_V0.1.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 00:03:42 On 17/10/2025
