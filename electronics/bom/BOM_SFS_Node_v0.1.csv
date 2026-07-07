@@ -1,6 +1,6 @@
 Group,Reference,Description,Value / Specification,MPN,Package,Qty per node,Supplier,Supplier P/N,Notes
 PCB,U1,Microcontroller,32-bit Cortex-M0 48MHz,STM32F051K8T7,LQFP-32,1,Farnell,2333141,T6 (0–70°C) currently deployed; T7 (−40–85°C) specified for production
-PCB,U2,LoRa transceiver module,433 MHz ASR6601-based,LR02,Module,1,AliExpress,1005007260159931,Pick proper frequency range for local legislation
+PCB,U2,LoRa transceiver module,868 MHz ASR6601-based,LR02,Module,1,AliExpress,1005007260159931,Pick proper frequency range for local legislation
 PCB,U3,Temperature & humidity sensor,±0.1°C / ±1.5% RH / I²C,SHT85,DFN-8,1,Farnell,3106917,Primary
 PCB,U3-ALT,Temperature & humidity sensor (alternative),±0.5°C / ±2–5% RH,AM2302 / DHT22,Through-hole module,1,Generic,,Lower-cost alternative
 PCB,U4,Dual 4-to-1 multiplexer,,74HC153D,SOIC-16,1,Farnell,1201248,Sensor port MUX
